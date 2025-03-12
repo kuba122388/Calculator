@@ -17,22 +17,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val buttons = listOf<Button>(
-            findViewById(R.id.button3),
-            findViewById(R.id.button4),
-            findViewById(R.id.button5),
-            findViewById(R.id.button6)
-        )
-
-        val displayMetrics = resources.displayMetrics
-        val screenWidthDp = displayMetrics.widthPixels / displayMetrics.density
-
-        if (screenWidthDp >= 600){
-            for (button in buttons){
-                button.layoutParams.width = 800
-            }
-        }
-
     }
 }
