@@ -1,5 +1,6 @@
 package com.example.calculator
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -17,5 +18,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val androidlyButton: Button = findViewById(R.id.button3)
+        androidlyButton.setOnClickListener {
+            val intent = Intent(this, Activity_simple_calc::class.java);
+            startActivity(intent);
+        }
+
     }
 }
