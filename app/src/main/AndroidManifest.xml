@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Calculator"
         tools:targetApi="31" >
         <activity
-            android:name=".activity_simple_calc"
+            android:name=".Activity_simple_calc"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
