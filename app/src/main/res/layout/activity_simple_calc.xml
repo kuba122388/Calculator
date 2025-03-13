@@ -259,7 +259,7 @@
         app:layout_constraintWidth_percent="0.22" />
 
     <Button
-        android:id="@+id/backspace"
+        android:id="@+id/Backspace"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
@@ -286,29 +286,38 @@
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline8"
         app:layout_constraintEnd_toStartOf="@+id/PlusMinus"
-        app:layout_constraintStart_toEndOf="@+id/backspace"
+        app:layout_constraintStart_toEndOf="@+id/Backspace"
         app:layout_constraintTop_toTopOf="@+id/guideline9"
         app:layout_constraintWidth_percent="0.465" />
 
-    <TextView
-        android:id="@+id/Result"
+    <HorizontalScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:ellipsize="none"
-        android:gravity="right|center_vertical"
+        android:fillViewport="true"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:scrollHorizontally="false"
-        android:singleLine="true"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:scrollbars="none"
+        android:foregroundGravity="right"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/Result"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="none"
+            android:layout_gravity="end"
+            android:gravity="end|center"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+    </HorizontalScrollView>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline5"
