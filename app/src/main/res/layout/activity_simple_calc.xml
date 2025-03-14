@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".Activity_simple_calc">
+    tools:context=".ActivitySimpleCalc">
 
     <Button
         android:id="@+id/PlusMinus"
@@ -291,18 +291,19 @@
         app:layout_constraintWidth_percent="0.465" />
 
     <HorizontalScrollView
+        android:id="@+id/HSView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:fillViewport="true"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
         android:scrollbars="none"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/Result"
@@ -311,7 +312,7 @@
             android:layout_gravity="end"
             android:ellipsize="none"
             android:gravity="end|center"
-            android:scrollHorizontally="true"
+            android:scrollHorizontally="false"
             android:singleLine="true"
             android:text="0"
             android:textAlignment="textEnd"

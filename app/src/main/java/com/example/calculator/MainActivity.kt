@@ -21,8 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         val androidlyButton: Button = findViewById(R.id.button3)
         androidlyButton.setOnClickListener {
-            val intent = Intent(this, Activity_simple_calc::class.java);
-            startActivity(intent);
+            val intent = Intent(this, ActivitySimpleCalc::class.java)
+            startActivity(intent)
         }
 
     }
