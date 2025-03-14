@@ -1,10 +1,13 @@
 package com.example.calculator
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -24,6 +27,29 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ActivitySimpleCalc::class.java)
             startActivity(intent)
         }
+        updateGuideline()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        updateGuideline()
+    }
+
+
+    private fun updateGuideline() {
+        val constraintLayout = findViewById<ConstraintLayout>(R.id.main)
+        val constraintSet = ConstraintSet()
+        constraintSet.clone(constraintLayout)
+
+        if(resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            constraintSet.setGuidelinePercent(R.id.TopGuideline, 0.0f)
+        }
+        else {
+            constraintSet.setGuidelinePercent(R.id.TopGuideline, 0.2f)
+        }
+        constraintSet.applyTo(constraintLayout)
 
     }
+
+
 }
