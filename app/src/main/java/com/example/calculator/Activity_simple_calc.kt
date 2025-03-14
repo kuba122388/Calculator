@@ -22,8 +22,10 @@ class Activity_simple_calc : AppCompatActivity() {
 
         // If decimal fraction is .0 drop last 2 chars
         fun formatResult(value: Double): String{
-            return if (value % 1 == 0.0 && !value.toString().contains("E")) value.toString().dropLast(2)
-            else value.toString()
+            return if (value % 1 == 0.0 && !value.toString().contains("E")) value.toString().trimEnd('0').trimEnd('.')
+            else {
+                value.toString()
+            }
         }
 
 
@@ -148,8 +150,10 @@ class Activity_simple_calc : AppCompatActivity() {
 
         // DONE - Clear one digit button
         backspace.setOnClickListener {
-            if (displayedValue.length > 2 || (displayedValue.length == 2 && displayedValue[0] != '-')) displayedValue =
-                displayedValue.dropLast(1)
+            if (displayedValue.length > 2 || (displayedValue.length == 2 && displayedValue[0] != '-')) {
+                displayedValue = displayedValue.dropLast(1)
+                if (displayedValue.last() == 'E') displayedValue = displayedValue.dropLast(1)
+            }
             else displayedValue = "0"
             resultView.text = displayedValue
         }
@@ -190,16 +194,17 @@ class Activity_simple_calc : AppCompatActivity() {
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
+        outState.putString("previousValue", previousValue)
         outState.putString("displayedValue", displayedValue)
+        outState.putString("operation", operation)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
 
-        val temp = savedInstanceState.getString("displayedValue")
-        if (temp != null) {
-            displayedValue = temp
-        }
+        previousValue = savedInstanceState.getString("previousValue").toString()
+        displayedValue = savedInstanceState.getString("displayedValue").toString()
+        operation = savedInstanceState.getString("operation").toString()
 
         val Result = findViewById<TextView>(R.id.Result)
         Result.text = displayedValue
