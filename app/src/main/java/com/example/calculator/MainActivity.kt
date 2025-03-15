@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
 
         val simpleCalc: Button = findViewById(R.id.button3)
         val advancedCalc: Button = findViewById(R.id.button4)
+        val about: Button = findViewById(R.id.button5)
+        val exit: Button = findViewById(R.id.button6)
 
         simpleCalc.setOnClickListener {
             val intent = Intent(this, ActivitySimpleCalc::class.java)
@@ -33,6 +35,15 @@ class MainActivity : AppCompatActivity() {
         advancedCalc.setOnClickListener {
             val intent = Intent(this, ActivityAdvancedCalc::class.java)
             startActivity(intent)
+        }
+
+        about.setOnClickListener {
+            val intent = Intent(this, ActivityAbout::class.java)
+            startActivity(intent)
+        }
+
+        exit.setOnClickListener{
+            finish()
         }
 
         updateGuideline()
