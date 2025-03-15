@@ -22,11 +22,19 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val androidlyButton: Button = findViewById(R.id.button3)
-        androidlyButton.setOnClickListener {
+        val simpleCalc: Button = findViewById(R.id.button3)
+        val advancedCalc: Button = findViewById(R.id.button4)
+
+        simpleCalc.setOnClickListener {
             val intent = Intent(this, ActivitySimpleCalc::class.java)
             startActivity(intent)
         }
+
+        advancedCalc.setOnClickListener {
+            val intent = Intent(this, ActivityAdvancedCalc::class.java)
+            startActivity(intent)
+        }
+
         updateGuideline()
     }
 
