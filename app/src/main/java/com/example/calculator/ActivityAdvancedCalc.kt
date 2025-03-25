@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.HorizontalScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -235,8 +236,10 @@ class ActivityAdvancedCalc : AppCompatActivity() {
         displayedValue = formatResult(result)
         resultView.text = displayedValue
         if (result.isInfinite() || result.isNaN()) {
+            Toast.makeText(this, "Illegal operation", Toast.LENGTH_SHORT).show()
             displayedValue = "0"
             this.operation = ""
+            resultView.text = displayedValue
         }
     }
 
@@ -271,9 +274,11 @@ class ActivityAdvancedCalc : AppCompatActivity() {
             return
         }
         if (displayedValue.toDouble().isNaN() || displayedValue.toDouble().isInfinite()) {
+            Toast.makeText(this, "Illegal operation", Toast.LENGTH_SHORT).show()
             previousValue = ""
             operation = ""
             displayedValue = "0"
+            resultView.text = displayedValue
         }
     }
 

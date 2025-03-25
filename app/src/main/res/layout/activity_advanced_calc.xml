@@ -30,7 +30,7 @@
             android:text="0"
             android:textAlignment="textEnd"
             android:textColor="#FFFFFF"
-            android:textSize="28sp" />
+            android:textSize="@dimen/resultTextSize" />
     </HorizontalScrollView>
 
     <GridLayout
@@ -57,7 +57,7 @@
             android:background="@drawable/button_gradient"
             android:text="Bksp"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -72,7 +72,7 @@
             android:background="@drawable/button_gradient"
             android:text="C"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -87,7 +87,7 @@
             android:background="@drawable/button_gradient"
             android:text="±"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -102,7 +102,7 @@
             android:background="@drawable/button_gradient"
             android:text="sin"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -117,7 +117,7 @@
             android:background="@drawable/button_gradient"
             android:text="cos"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -132,7 +132,7 @@
             android:background="@drawable/button_gradient"
             android:text="tan"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -147,7 +147,7 @@
             android:background="@drawable/button_gradient"
             android:text="ln"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -162,7 +162,7 @@
             android:background="@drawable/button_gradient"
             android:text="sqrt"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -177,7 +177,7 @@
             android:background="@drawable/button_gradient"
             android:text="x^2"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -192,7 +192,7 @@
             android:background="@drawable/button_gradient"
             android:text="x^y"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -207,7 +207,7 @@
             android:background="@drawable/button_gradient"
             android:text="log"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -222,7 +222,7 @@
             android:background="@drawable/button_gradient"
             android:text="7"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -237,7 +237,7 @@
             android:background="@drawable/button_gradient"
             android:text="8"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -252,7 +252,7 @@
             android:background="@drawable/button_gradient"
             android:text="9"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -267,7 +267,7 @@
             android:background="@drawable/button_gradient"
             android:text="/"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -282,7 +282,7 @@
             android:background="@drawable/button_gradient"
             android:text="4"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -297,7 +297,7 @@
             android:background="@drawable/button_gradient"
             android:text="5"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -312,7 +312,7 @@
             android:background="@drawable/button_gradient"
             android:text="6"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -327,7 +327,7 @@
             android:background="@drawable/button_gradient"
             android:text="*"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -342,7 +342,7 @@
             android:background="@drawable/button_gradient"
             android:text="1"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -357,7 +357,7 @@
             android:background="@drawable/button_gradient"
             android:text="2"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -372,7 +372,7 @@
             android:background="@drawable/button_gradient"
             android:text="3"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -387,7 +387,7 @@
             android:background="@drawable/button_gradient"
             android:text="-"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -402,7 +402,7 @@
             android:background="@drawable/button_gradient"
             android:text="0"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -417,7 +417,7 @@
             android:background="@drawable/button_gradient"
             android:text="."
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -432,7 +432,7 @@
             android:background="@drawable/button_gradient"
             android:text="="
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
 
         <Button
@@ -447,7 +447,7 @@
             android:background="@drawable/button_gradient"
             android:text="+"
             android:textAllCaps="false"
-            android:textSize="26sp"
+            android:textSize="@dimen/normalTextSize"
             app:layout_constraintTop_toBottomOf="@+id/Result" />
     </GridLayout>
 
