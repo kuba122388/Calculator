@@ -4,5 +4,12 @@
     <string name="advanced">Advanced</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
-    
+
+    <string name="aboutContent">
+Application Calculator v1.0\n
+Author: Jakub Bak\n
+Index number: 245762\n
+Version: 1.0.0\n
+Release Date: March 2025\n
+    </string>
 </resources>

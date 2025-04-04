@@ -17,16 +17,5 @@ class ActivityAbout : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        val textView = findViewById<TextView>(R.id.AboutText)
-
-        val ABOUT_TEXT = """
-Application Calculator v1.0
-Author: Jakub Bak
-Index number: 245762
-Version: 1.0.0
-Release Date: March 2025
-        """
-        textView.text = ABOUT_TEXT
     }
 }
